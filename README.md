@@ -1,36 +1,66 @@
-🐳 Docker Networking Project – Docker Networking with Realtime Application
-This project is designed as a practical lab to explore and understand Docker networking concepts using a real application stack involving a frontend, backend, and PostgreSQL database.
+# 🐳 Docker Networking Project – Docker Networking with Realtime Application
+
+This project is designed as a **practical lab** to explore and understand **Docker networking concepts** using a real application stack involving a **frontend**, **backend**, and **PostgreSQL database**.
 
 It includes interactive debugging, simulated network failures, and live testing with Docker CLI.
 
-📚 Table of Contents
-🚀 Project Overview
-📁 Project Structure
-🧠 Key Docker Networking Concepts
-⚙️ Setup Instructions
-🛠️ Docker Commands Reference
-🔍 Test & Debug Networking
-🔥 Simulate Network Failures
-🧪 Tools for Network Debugging
-✅ Learning Outcomes
-🚀 Project Overview
-Component	Description
-frontend	NGINX container serving static content
-backend	FastAPI application running on port 8000
-db	PostgreSQL database container
-All services are connected via a custom Docker network (app-net) to simulate real-world container communication.
+---
 
-📁 Project Structure
-docker-networking/ ├── backend/ │ ├── main.py │ ├── requirements.txt │ └── Dockerfile ├── frontend/ │ └── Dockerfile ├── docker-compose.yml └── README.md
+## 📚 Table of Contents
 
-🧠 Key Docker Networking Concepts
-Docker Networks: Bridge containers for private communication
-Service Discovery: Access containers by name (backend, db) using Docker DNS
-Port Publishing: Expose container ports to host using ports: in Docker Compose
-Network Isolation: Containers not in same network cannot communicate
-DNS Failures, Port Mapping Issues, Network Disconnects are testable in this setup
-⚙️ Setup Instructions
-1. Clone the Repository
+- [🚀 Project Overview](#-project-overview)
+- [📁 Project Structure](#-project-structure)
+- [🧠 Key Docker Networking Concepts](#-key-docker-networking-concepts)
+- [⚙️ Setup Instructions](#️-setup-instructions)
+- [🛠️ Docker Commands Reference](#️-docker-commands-reference)
+- [🔍 Test & Debug Networking](#-test--debug-networking)
+- [🔥 Simulate Network Failures](#-simulate-network-failures)
+- [🧪 Tools for Network Debugging](#-tools-for-network-debugging)
+- [✅ Learning Outcomes](#-learning-outcomes)
+
+---
+
+## 🚀 Project Overview
+
+| Component | Description |
+|----------|-------------|
+| `frontend` | NGINX container serving static content |
+| `backend`  | FastAPI application running on port 8000 |
+| `db`       | PostgreSQL database container |
+
+All services are connected via a **custom Docker network** (`app-net`) to simulate real-world container communication.
+
+---
+
+## 📁 Project Structure
+docker-networking/
+├── backend/
+│ ├── main.py
+│ ├── requirements.txt
+│ └── Dockerfile
+├── frontend/
+│ └── Dockerfile
+├── docker-compose.yml
+└── README.md
+
+
+---
+
+## 🧠 Key Docker Networking Concepts
+
+- **Docker Networks:** Bridge containers for private communication
+- **Service Discovery:** Access containers by name (`backend`, `db`) using Docker DNS
+- **Port Publishing:** Expose container ports to host using `ports:` in Docker Compose
+- **Network Isolation:** Containers not in same network cannot communicate
+- **DNS Failures, Port Mapping Issues, Network Disconnects** are testable in this setup
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/<your-username>/docker-networking-lab.git
 cd docker-networking-lab
 docker-compose up -d --build
