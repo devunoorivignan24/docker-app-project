@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker Networking Demo</title>
+</head>
+<body>
+    <h1>Frontend</h1>
+    <button onclick="callBackend()">Call Backend</button>
+    <button onclick="callDB()">Check DB</button>
+    <pre id="result"></pre>
+
+    <script>
+        function callBackend() {
+            fetch('/api/')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+                });
+        }
+
+        function callDB() {
+            fetch('/api/db')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+                });
+        }
+    </script>
+</body>
+</html>
+
