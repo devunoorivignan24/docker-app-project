@@ -1,4 +1,4 @@
-# 🐳 Docker Networking Project – Learn Docker Networking with Real Application
+# 🐳 Docker Networking Project – Docker Networking with Realtime Application
 
 This project is designed as a **practical lab** to explore and understand **Docker networking concepts** using a real application stack involving a **frontend**, **backend**, and **PostgreSQL database**.
 
